@@ -21,7 +21,7 @@ requirejs.config({
 
 });
 
-require(['jquery', 'angular', 'angular-route'], function($, angular) {
+require(['jquery', 'angular', 'angular-route'], function($, angular, ngRoute) {
   console.log('It works!');
   console.log($, angular, ngRoute);
 });
