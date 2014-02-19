@@ -1,6 +1,6 @@
 {
   "name": "generator-angoo",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "description": "A AngularJS, RequireJS, Bootstrap, jQuery stack project Yeoman generator. It comes with livereload and all APIs set throught RequireJS",
   "license": "MIT",
   "main": "app/index.js",
