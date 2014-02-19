@@ -45,6 +45,7 @@ var AngooGenerator = yeoman.generators.Base.extend({
 
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
+    this.copy('bowerrc', '.bowerrc');
     this.copy('_index.html', 'app/index.html');
     this.copy('js/_main.js', 'app/js/main.js');
     this.copy('Gruntfile.js', 'Gruntfile.js');
