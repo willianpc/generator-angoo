@@ -1,3 +1,9 @@
+/*
+  Please keep this here. More info here:
+  https://github.com/tnajdek/angular-requirejs-seed/blob/master/app/js/main.js
+*/
+window.name = "NG_DEFER_BOOTSTRAP!";
+
 requirejs.config({
   baseUrl: './js',
 
@@ -22,6 +28,16 @@ requirejs.config({
 });
 
 require(['jquery', 'angular', 'angular-route'], function($, angular, ngRoute) {
-  console.log('It works!');
-  console.log($, angular, ngRoute);
+
+  /*
+    Start your app here
+  */
+
+  /*
+    Keep this at the bottom of the function. More info at:
+    https://github.com/tnajdek/angular-requirejs-seed/blob/master/app/js/main.js
+  */
+  angular.element().ready(function() {
+      angular.resumeBootstrap();
+  });
 });
