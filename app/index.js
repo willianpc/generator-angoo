@@ -40,13 +40,16 @@ var AngooGenerator = yeoman.generators.Base.extend({
   app: function () {
     this.mkdir('app');
     this.mkdir('app/js');
+    this.mkdir('app/js/controllers');
+    this.mkdir('app/js/directives');
+    this.mkdir('app/js/filters');
     this.mkdir('app/lib');
     this.mkdir('app/css');
 
     this.copy('_package.json', 'package.json');
     this.copy('_bower.json', 'bower.json');
     this.copy('bowerrc', '.bowerrc');
-    this.copy('_index.html', 'app/index.html');
+    this.template('_index.html', 'app/index.html');
     this.copy('js/_main.js', 'app/js/main.js');
     this.copy('Gruntfile.js', 'Gruntfile.js');
   },
