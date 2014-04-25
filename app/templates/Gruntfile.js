@@ -3,7 +3,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     watch: {
       dist: {
-        files: ['*', 'app/*', 'app/js/*.js', 'app/css/*.css'],
+        files: ['*', 'app/*', 'app/js/*.js', 'app/css/*.css', 'app/**/*.htm', 'app/**/*.html'],
         //tasks: [''],
 
         options: {
@@ -16,6 +16,7 @@ module.exports = function(grunt) {
       server: {
         options: {
           port: 9090,
+          hostname: '0.0.0.0',
           base: 'app'
         }
       }
@@ -38,7 +39,9 @@ module.exports = function(grunt) {
           {
             expand: true, 
             flatten: true,
-            src: ['bower_components/bootstrap/dist/css/bootstrap.min.css', 'bower_components/bootstrap/dist/css/bootstrap-theme.min.css'],
+            src: ['bower_components/bootstrap/dist/css/bootstrap.min.css', 
+                  'bower_components/bootstrap/dist/css/bootstrap-theme.min.css',
+                  'bower_components/bootstrap/dist/fonts'],
             dest: 'app/css'
           },
           

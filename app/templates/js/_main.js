@@ -27,7 +27,7 @@ requirejs.config({
 
 });
 
-require(['jquery', 'angular', 'angular-route'], function($, angular, ngRoute) {
+require(['<%=appNameNoSpace%>'], function(<%=appNameNoSpace%>) {
 
   /*
     Start your app here

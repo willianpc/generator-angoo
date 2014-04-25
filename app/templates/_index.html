@@ -1,16 +1,14 @@
 <!doctype html>
 <html>
 <head>
-  <title>Welcome to the <%=projectName%> project</title>
+  <meta charset="UTF-8">
+  <title>Welcome to the <%=projectName%></title>
   <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css"/>
 </head>
-<body>
+<body ng-app="<%=appNameNoSpace%>">
 
-  <div class="container">
-    <h1>Welcome to the <%=projectName%> project</h1>
-    <h2>This nice project stack has AngularJS, RequireJS, jQuery and Bootstrap</h2>
-  </div>
+  <div ng-view></div>
 
   <script src="http://localhost:35729/livereload.js"></script>
   <script type="text/javascript" data-main="js/main" src="lib/require.js"></script>

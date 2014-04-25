@@ -32,6 +32,7 @@ var AngooGenerator = yeoman.generators.Base.extend({
 
     this.prompt(prompts, function (props) {
       this.projectName = props.projectName;
+      this.appNameNoSpace = props.projectName.replace(/[ çãõáà]/g, '');
 
       done();
     }.bind(this));
@@ -40,6 +41,7 @@ var AngooGenerator = yeoman.generators.Base.extend({
   app: function () {
     this.mkdir('app');
     this.mkdir('app/js');
+    this.mkdir('app/partials');
     this.mkdir('app/js/controllers');
     this.mkdir('app/js/directives');
     this.mkdir('app/js/filters');
@@ -50,7 +52,9 @@ var AngooGenerator = yeoman.generators.Base.extend({
     this.copy('_bower.json', 'bower.json');
     this.copy('bowerrc', '.bowerrc');
     this.template('_index.html', 'app/index.html');
-    this.copy('js/_main.js', 'app/js/main.js');
+    this.template('partials/_home.html', 'app/partials/home.html');
+    this.template('js/_main.js', 'app/js/main.js');
+    this.template('js/_myApp.js', 'app/js/' + this.appNameNoSpace + '.js');
     this.copy('Gruntfile.js', 'Gruntfile.js');
   },
 
